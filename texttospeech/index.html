@@ -145,7 +145,7 @@
       <hr> 
       <div>
         <p>Copy this text and give it to me on discord once you are satisfied with your voice:</p>
-        <p><input id="output" readonly="true" value="test" style="width: 500px;"/></p>
+        <p><input id="output" readonly="true" value="" style="width: 500px;"/></p>
       </div>
     </div>
 
@@ -158,7 +158,7 @@
 
         $("#rateTxt").text(rate);
         $("#pitchTxt").text(pitch);
-        $("#output").val(`{ voice: "${voice}, rate: ${rate}, pitch: ${pitch} }`);
+        $("#output").val(`{ voice: "${voice}", rate: ${rate}, pitch: ${pitch} }`);
       }
 
       function playVoice() {
@@ -179,7 +179,7 @@
       $("#voice").change(updateValues);
       $("#pitch").change(updateValues);
       $("#rate").change(updateValues);
-
+      updateValues();
     </script>
   </body>
 </html>
